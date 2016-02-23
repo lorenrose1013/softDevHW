@@ -3,14 +3,17 @@ console.log("script loaded");
 var canvas = document.getElementById("playground");
 var context = canvas.getContext("2d");
 var button = document.getElementById("circle");
+var stop
 
 context.strokeRect(0, 0, 538, 538);
 
 var rad = 0;
 var grow = true; //false means shrink
+var run = false;
 
 var buttonClick =  function(e){
     //clicking of circle button
+    run = true;
     e.preventDefault();
     window.requestAnimationFrame(circle_func);
     console.log("button clicked!");
@@ -19,6 +22,7 @@ var buttonClick =  function(e){
 
 
 var circle_func = function(){
+    if (run){
     context.clearRect(0, 0, 538, 538);
     
     //draw the circle
@@ -43,6 +47,7 @@ var circle_func = function(){
 
     context.strokeRect(0, 0, 538, 538);
     window.requestAnimationFrame(circle_func);
+	}
 }
 
 
