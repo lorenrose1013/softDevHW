@@ -69,10 +69,10 @@ var bounce_func = function(){
     context.clearRect(0, 0, 538, 538);
     context.strokeRect(0, 0, 538, 538);
     context.drawImage(img, x, y, 50, 50);
-    if (x <= 0 + 50 || x >= 538 - 50){
+    if (x <= 0  || x >= 538 - 50){
 	x_vel = -x_vel;
     }
-    if (y <= 0 + 50 || y >= 538 - 50){
+    if (y <= 0  || y >= 538 - 50){
 	y_vel = -y_vel;
     }
     console.log("x: " + x + " y: " + y );
