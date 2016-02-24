@@ -63,17 +63,17 @@ var circle_func = function(){
 var x_vel, y_vel;
 var x, y;
 x = y = 538 / 2;
-x_vel = y_vel = 3;
-
+x_vel = 3;
+y_vel = 5;
 var bounce_func = function(){
     context.clearRect(0, 0, 538, 538);
     context.strokeRect(0, 0, 538, 538);
     context.drawImage(img, x, y, 50, 50);
-    if (x == 0 || x == 538){
-	x = -x;
+    if (x <= 0 + 50 || x >= 538 - 50){
+	x_vel = -x_vel;
     }
-    if (y == 0 || y == 538){
-	y = -y;
+    if (y <= 0 + 50 || y >= 538 - 50){
+	y_vel = -y_vel;
     }
     console.log("x: " + x + " y: " + y );
     x += x_vel;
