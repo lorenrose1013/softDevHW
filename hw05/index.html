@@ -1,15 +1,34 @@
 <!DOCTYPE html>
 
 <html>
-  <style type="css/style.css"></style>
-  <body>
 
-  	<h3> Democratic Delegations </h3>
-  	Total Delegates: 4763
-     <div class="chart">
-     </div>
-  </body>
-<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<script src="index.js"> </script>
+<head>
+	<title>Delegate Count: 2016 Presidential Election</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
 
-<html>
+<body>
+	<h1>Delegate Count: 2016 Presidential Election</h1>
+
+	<div id="dem">
+		<h2>Democratic Delegates</h2>
+		<p>Total Delegates: 4,051</p>
+		<p id="key-dem-all">Allotted Delegates: 1,932</p>
+		<p id="key-dem-non">Available Delegates: 2,119</p>
+		<div class="chart"></div>
+	</div>
+
+	<div id="rep">
+		<h2>Republican Delegates</h2>
+		<p>Total Delegates: 2,472</p>
+		<p id="key-rep-all">Allotted Delegates: 1,408</p>
+		<p id="key-rep-non">Available Delegates: 1,064</p>
+		<div class="chart"></div>
+	</div>
+</body>
+
+<script src="index.js">
+</script>
+
+</html>

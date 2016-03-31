@@ -1,8 +1,37 @@
-   .chart div {
-    font: 14px sans-serif;
-    background-color: steelblue;
-    padding: 3px;
-    text-align: right;
-    margin: 1px;
-    color: white;
-  }
+h1, h2 {
+	text-align: center;
+}
+
+#dem {
+	float: left;
+	width: 50%;
+}
+
+#rep {
+	float: right;
+	width: 50%;
+}
+
+.chart div {
+	padding: 10px;
+	margin: 0px 0px 10px;
+	white-space: nowrap;
+}
+
+p {
+	padding: 10px;
+	text-align: center;
+}
+
+#key-dem-all {
+	background-color: #44F;
+}
+#key-dem-non {
+	background-color: #AAF;
+}
+#key-rep-all {
+	background-color: #F44;
+}
+#key-rep-non {
+	background-color: #FAA;
+}
