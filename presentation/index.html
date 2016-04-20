@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html>
-	<h1> Cross Site Scripting! (XSS) </h1>
+  <style>
+            body {margin: 5% auto; background: #f2f2f2; color: #444444; font-family: 'Courier new'; font-size: 14px; line-height: 1.6;  max-width: 73%;}
+            #code {
+			    padding:35px;
+			    background: 	#808080;
+			    font-color: white;
+			    background-clip: content-box;
+			}
+            a {border-bottom: 1px solid #444444; color: #444444; text-decoration: none;}
+            a:hover {border-bottom: 0;}
+            h1, h2 {line-height: 1.3;}
+        </style>
+	<h1> Cross Site Scripting! (XSS) </h1> by Loren Maggiore
 		<h2>The Basics</h2>
 			<p>
 				Cross Site Scripting, more commonly known as XSS, is a type of web vulnerability that allows for the unintended execution of arbitrary javascript on a webpage. It occurs when user input is added to a webpage unsanitized, allowing users to inject html and javascript code, which the browser renders as if it came from the author of the page.
@@ -14,14 +26,17 @@
 		<h2>Finding XSS Vulns</h2>
 			<p>
 				To discover XSS vulnerabilities, test any field that accepts user input and attempt to insert special characters, such as script tags. Observe how the input is represented when printed back, and make note of any missing characters or html-encoding. This website details some methods to try to get past basic filtering.
-				<a href="https://www.owasp.org/index.php/Testing_for_Cross_site_scripting"></a>
+				<a href="https://www.owasp.org/index.php/Testing_for_Cross_site_scripting">https://www.owasp.org/index.php/Testing_for_Cross_site_scripting</a>
 			</p>
 
 		<h2>Exploiting XSS Vulns</h2>
 			<p>
 				Exploiting XSS vulns simply means getting a script code through any filtering, with some javascript payload enclosed. The simplest example is a plain:
-						"&lt;script&gt; alert(1) &lt;/script&gt;"
+					<center><br>
+					<div id="code">	&lt;script&gt; alert(1) &lt;/script&gt; </div>
+					<br></center>
 				The javascript inside the script tag is referred to as the payload. Your payload can be anything you can write in javascript. For example, a keylogger: 
+					<br><div id="code"><center>
 						&lt;script&gt;
 						var keys=&#39;&#39;;
 						document.onkeypress = function(e) {
@@ -36,6 +51,7 @@
 						  keys = &#39;&#39;;
 						}, 1000);
 						&lt;/script&gt;
+					</div><br></center>
 				Try writing your own below!
 			</p>
 
@@ -50,7 +66,7 @@
 
 		<h2>Try It!</h2>
 			<p>
-				Go to the stuy homework server or <a href="http://polarity.party/~polarity/datingSite/"></a> to try it out. Poke around. See what you can do. 
+				Go to the stuy homework server or <a href="http://polarity.party/~polarity/datingSite">http://polarity.party/~polarity/datingSite</a> to try it out. Poke around. See what you can do. 
 			<p>	
 
 </html>
